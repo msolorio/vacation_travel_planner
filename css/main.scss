@@ -35,6 +35,18 @@ VACATION BOX
 	border-bottom:3px solid $lightBlue;
 	padding:5px 0;
 }
+.quantity {
+	color: #656565;
+	&:focus {
+		outline:none;
+	}
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
 .vacation > p {
 	font-weight:300;
 }
