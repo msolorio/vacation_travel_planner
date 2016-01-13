@@ -43,7 +43,7 @@ HEADER
 }
 .top-h2, .top-h3 {
 	color: #fff;
-	text-shadow: 4px 4px 3px #060606;
+	text-shadow: 1px 1px 9px #060606;
 }
 
 /***************************************
@@ -87,6 +87,10 @@ input[type=number]::-webkit-outer-spin-button {
 MEDIA QUERIES
 ***************************************/
 @media only all and (max-width:768px) {
+	.top-h2, .top-h3 {
+		margin:0 0 34px 5%;
+	}
+
 	.vacation {
 		width: 90%;
 		margin:0 5% 3%;
