@@ -30,9 +30,18 @@ $('.vacation-wrap').on('click', '.view-comments', function(){
 	}
 
 	if(activeComments.length) {
+
+		//grab the location of comment clicked
+		var activeComLoc = activeComments.data('location');
+		var nextComLoc = thisComments.data('location');
 		activeComments.slideUp(200, function(){
 			activeComments.removeClass('active');
-			showNextComments();
+
+			//check if same comment is clicked twice
+			//only show if it is a difference comment section
+			if(activeComLoc !== nextComLoc){
+				showNextComments();	
+			}
 		});
 	} else {
 		showNextComments();
