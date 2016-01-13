@@ -19,7 +19,7 @@ body {
 .section-wrap {
     max-width:1140px;
     margin:0 auto;
-    padding:3% 3% 0;
+    padding:0 3%;
 }
 h1, h2, h3, h4, h5, h6, p, span {
 	margin: 0 0 16px;
@@ -27,25 +27,44 @@ h1, h2, h3, h4, h5, h6, p, span {
 h1, h2, h3, h4, h5, h6 {
 	font-weight:400;
 }
+
+/***************************************
+HEADER
+***************************************/
+.header-div {
+	padding: 20px 0;
+	//@include darkOpaque;
+}
+.top-h2 {
+	margin-bottom:34px;
+	padding:8px 0;
+	max-width:285px;
+	border-bottom:3px solid $lightBlue;
+}
+.top-h2, .top-h3 {
+	color: #fff;
+	text-shadow: 4px 4px 3px #060606;
+}
+
 /***************************************
 VACATION BOX
 ***************************************/
 
 .vacation {
-    background: rgba(0, 0, 0, 0.55);
+    @include darkOpaque;
     float:left;
     padding: 4%;
-    @include boxShadow;
-    border: 2px solid $white;
     width:31%;
     margin: 0 1.5% 1.5% 0;
+    border: 2px solid $white;
 }
 .vacation > h3 {
 	border-bottom:3px solid $lightBlue;
 	padding:5px 0;
 }
 .quantity {
-	color: #333;
+	color: #505050;
+	font-weight:400;
 	width:118px;
 	&:focus {
 		outline:none;
@@ -63,12 +82,13 @@ input[type=number]::-webkit-outer-spin-button {
 .total-price {
 	margin:0;
 }
-.top-h2, .top-h3 {
-	margin-bottom: 34px;
-}
 
 /***************************************
 MEDIA QUERIES
 ***************************************/
-@media only all and (max-width:1024px) {
+@media only all and (max-width:768px) {
+	.vacation {
+		width: 90%;
+		margin:0 5% 3%;
+	}
 }

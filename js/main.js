@@ -1,6 +1,8 @@
 $('.vacation-wrap').on('keyup', '.quantity', function(){
+	var thisVacation = $(this).closest('.vacation');
+
 	//fetch price per ticket
-	var price = +$(this).closest('.vacation').data('price');
+	var price = +thisVacation.data('price');
 
 	//fetch quantity entered
 	var quantity = +$(this).val();
@@ -10,5 +12,5 @@ $('.vacation-wrap').on('keyup', '.quantity', function(){
 	total = total.toFixed(2);
 
 	//update total
-	$(this).closest('.vacation').find('.total').html(total);
+	thisVacation.find('.total').html(total);
 });
