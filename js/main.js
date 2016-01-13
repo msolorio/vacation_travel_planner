@@ -7,7 +7,8 @@ $('.vacation-wrap').on('keyup', '.quantity', function(){
 
 	//calculate total
 	var total = price * quantity;
+	total = total.toFixed(2);
 
 	//update total
-	$('#total').html(total);
+	$(this).closest('.vacation').find('.total').html(total);
 });
