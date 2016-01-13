@@ -6,6 +6,20 @@
 
 @mixin darkOpaque() {
 	background: rgba(0, 0, 0, 0.55);
-	-webkit-box-shadow: 1px 1px 5px #000;
-	box-shadow: 1px 1px 10px #000;
+}
+
+@mixin borderRadiusBottom($corner) {
+	-webkit-border-radius: 0 0 $corner $corner;
+	-moz-border-radius: 0 0 $corner $corner;
+	-ms-border-radius: 0 0 $corner $corner;
+	-o-border-radius: 0 0 $corner $corner;
+	border-radius: 0 0 $corner $corner;
+}
+
+@mixin borderRadius($corner) {
+	-webkit-border-radius: $corner;
+	-moz-border-radius: $corner;
+	-ms-border-radius: $corner;
+	-o-border-radius: $corner;
+	border-radius: $corner;
 }

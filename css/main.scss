@@ -27,7 +27,9 @@ h1, h2, h3, h4, h5, h6, p, span {
 h1, h2, h3, h4, h5, h6 {
 	font-weight:400;
 }
-
+.clear-both {
+	clear: both;
+}
 /***************************************
 HEADER
 ***************************************/
@@ -49,13 +51,19 @@ HEADER
 /***************************************
 VACATION BOX
 ***************************************/
-
+.vacation-container {
+	width:31%;
+	float:left;
+    margin: 0 1.5% 1.5% 0;
+}
 .vacation {
     @include darkOpaque;
-    float:left;
-    padding: 4%;
-    width:31%;
-    margin: 0 1.5% 1.5% 0;
+    -webkit-box-shadow: 1px 1px 5px #000;
+	box-shadow: 1px 1px 10px #000;
+    width:100%;
+    padding: 7%;
+    //width:100%;
+    //height:100%;
     border: 2px solid $white;
 }
 .vacation > h3 {
@@ -80,7 +88,31 @@ input[type=number]::-webkit-outer-spin-button {
 	font-weight:300;
 }
 .total-price {
-	margin:0;
+	
+}
+.view-comments {
+	color:$black;
+	padding:7px 10px;
+	background: $lightBlue;
+	border:2px solid $black;
+	@include borderRadius(3px);
+}
+/***************************************
+COMMENTS
+***************************************/
+.comments {
+	display:none;
+	@include darkOpaque;
+	padding: 10% 7%;
+	height:90px;
+	@include borderRadiusBottom(3px);
+}
+.comments-ul {
+	list-style-type:none;
+}
+.comments-li {
+	font-style:italic;
+	font-weight:300;
 }
 
 /***************************************
@@ -90,8 +122,10 @@ MEDIA QUERIES
 	.top-h2, .top-h3 {
 		margin:0 0 34px 5%;
 	}
-
 	.vacation {
+		padding:4%;
+	}
+	.vacation-container {
 		width: 90%;
 		margin:0 5% 3%;
 	}
